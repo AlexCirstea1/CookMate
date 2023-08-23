@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class User implements UserDetails {
     @Id
-    //@GeneratedValue
+    @GeneratedValue
     private Integer id;
     private String firstname;
     private String lastname;
@@ -53,7 +53,7 @@ public class User implements UserDetails {
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
